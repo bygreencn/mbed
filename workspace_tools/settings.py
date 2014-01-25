@@ -29,13 +29,13 @@ ROOT = abspath(join(dirname(__file__), ".."))
 BUILD_DIR = abspath(join(ROOT, "build"))
 
 # ARM
-armcc = "standalone" # "keil", or "standalone", or "ds-5"
+armcc = "keil" # "keil", or "standalone", or "ds-5"
 
 if armcc == "keil":
-    ARM_PATH = "C:/Keil_4_54/ARM"
-    ARM_BIN = join(ARM_PATH, "BIN40")
-    ARM_INC = join(ARM_PATH, "RV31", "INC")
-    ARM_LIB = join(ARM_PATH, "RV31", "LIB")
+    ARM_PATH = "C:\\Keil\\ARM"
+    ARM_BIN = join(ARM_PATH, "ARMCC","bin")
+    ARM_INC = join(ARM_PATH, "ARMCC", "include")
+    ARM_LIB = join(ARM_PATH, "ARMCC", "lib")
 
 elif armcc == "standalone":
     ARM_PATH = "C:/Program Files/ARM/armcc_4.1_791"
